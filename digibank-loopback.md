@@ -129,15 +129,8 @@ pair for us. We can check that by entering the command below :
     -rw-r--r-- 1 tecadmin tecadmin  182 Jun 27 00:39 5b17e99aa4da28c2dad4d834409e01c543f19965840b3ba4482049111893897e-pub
     -rw-r--r-- 1 tecadmin tecadmin 1104 Jun 27 00:39 app-admin
 
-**14.** Then we can back up one more directory and then run the command
-below :
 
-    tecadmin@ubuntubase:~/Desktop/digibank/Identity$ cd ..
-    tecadmin@ubuntubase:~/Desktop/digibank$ npm install
-    *
-    *
-
-**15.** Once npm has completed some installations, enter the next
+**14.** Once npm has completed some installations, enter the next
 command below to push our changes to our GitHub account :
 
     tecadmin@ubuntubase:~/Desktop/digibank$ git add *
@@ -155,19 +148,19 @@ command below to push our changes to our GitHub account :
     To github.com:austingrice/digibank.git
        140abdf..0666159  master -> master
 
-**16.** Go back to your GitHub repository of `digibank` and then hit the
+**15.** Go back to your GitHub repository of `digibank` and then hit the
 `refresh` button to confirm your changes took.
 
 **JENKINS THEN GOES TO WORK FOR K8 THE LOOPBACKAPI**
 
-**17.** Once we have our loopback application deployed in our IBM Cloud
+**16.** Once we have our loopback application deployed in our IBM Cloud
 Private cluster, go ahead and open it. Once you get to the homepage for
 loopback, click on the `Explorer` link to view our controllers (which
 will submit transactions for us).
 
 ![image](cicdimages/explorer.png)
 
-**18.** Go ahead and toggle on the `IssueController` and then click on
+**17.** Go ahead and toggle on the `IssueController` and then click on
 `Try it Out` in the top right. Go ahead and enter the text below to
 issue a new paper :
 
@@ -180,7 +173,7 @@ issue a new paper :
       "paperRate": "0.02"
     }
 
-**19.** Then click on the `Execute` button below. Then, let it spin
+**18.** Then click on the `Execute` button below. Then, let it spin
 around for a moment, but it should come back with some type of response
 in the response body. Sometimes, it might continuously spin. It will
 eventually time out, but actually submit the paper and have it be
@@ -192,7 +185,7 @@ should come back.
 
 ![image](cicdimages/issue.png)
 
-**20.** Do a similar transaction for `Buy` once you click on
+**19.** Do a similar transaction for `Buy` once you click on
 `Try it Out` in the top right :
 
     {
@@ -206,7 +199,7 @@ should come back.
 
 ![image](cicdimages/buy.png)
 
-**21.** Do the same for the `Redeem` transaction once you click on
+**20.** Do the same for the `Redeem` transaction once you click on
 `Try it Out` in the top right :
 
     {
@@ -216,7 +209,7 @@ should come back.
       "redeemDateTime": "2020-11-30"
     }
 
-**22.** All of these transactions are being recorded on the IBM
+**21.** All of these transactions are being recorded on the IBM
 Blockchain Platform by going to your channel list and then viewing the
 block height and list of transactions.
 

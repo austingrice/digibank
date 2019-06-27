@@ -25,6 +25,6 @@ spec:
       - name: mycontainername
         image: myimagename
         ports:
-        - containerPort: 3000
+        - containerPort: 3001
       imagePullSecrets:
       - name: "myteamname-icp-docker-registry"
