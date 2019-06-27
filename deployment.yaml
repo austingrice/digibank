@@ -1,0 +1,30 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels: {app: myappname, env: myenvname}
+  name: mydeploymentname
+spec:
+  selector:
+    matchLabels:
+      app: myappname
+      env: myenvname
+  replicas: 1
+  template:
+    metadata: {labels: {app: myappname, env: myenvname}}
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - myjenkinsnode
+      containers:
+      - name: mycontainername
+        image: myimagename
+        ports:
+        - containerPort: 3000
+      imagePullSecrets:
+      - name: "myteamname-icp-docker-registry"
