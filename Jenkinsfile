@@ -3,7 +3,7 @@ pipeline {
   environment {
     // You know the drill. Please change team00 to your team. If you were teamxx you would do: team = 'teamxx' 
     // The line below is the only line you need to change and team00 is the only piece of that line to change.
-    team = 'team00'
+    team = 'team19'
     registry = "wsc-ibp-icp-cluster.icp:8500"
     icp_proxy_ip = '192.168.22.81'
     icp_endpoint = "${icp_proxy_ip}:8443"
